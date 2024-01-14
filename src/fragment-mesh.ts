@@ -3,10 +3,10 @@ import {
   InstancedMesh,
   Color,
   MeshLambertMaterial,
+  BufferAttribute,
 } from "three";
-import { GLTFExporter } from "three/examples/jsm/exporters/GLTFExporter";
+import { GLTFExporter } from "three-stdlib";
 import { Material } from "three/src/materials/Material";
-import { BufferAttribute } from "three/src/core/BufferAttribute";
 import { IFragmentGeometry, IFragmentMesh } from "./base-types";
 import { Fragment } from "./fragment";
 

@@ -1,5 +1,5 @@
 import { BufferAttribute, BufferGeometry, Mesh } from "three";
-import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils";
+import { mergeBufferGeometries } from "three-stdlib";
 
 export class GeometryUtils {
   static merge(
@@ -14,7 +14,7 @@ export class GeometryUtils {
       sizes.push(merged.index!.count);
     }
 
-    const geometry = mergeGeometries(geometriesByMat);
+    const geometry = mergeBufferGeometries(geometriesByMat) as BufferGeometry;
     this.setupMaterialGroups(sizes, geometry);
     this.cleanUp(geometriesByMat);
     return geometry;
@@ -109,7 +109,7 @@ export class GeometryUtils {
     if (splitByBlocks) {
       this.splitByBlocks(geometries);
     }
-    const merged = mergeGeometries(geometries);
+    const merged = mergeBufferGeometries(geometries) as BufferGeometry;
     this.cleanUp(geometries);
     return merged;
   }

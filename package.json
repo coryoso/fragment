@@ -31,7 +31,8 @@
   "homepage": "https://github.com/ifcjs/fragment",
   "dependencies": {
     "flatbuffers": "^23.3.3",
-    "three-mesh-bvh": "0.6.0"
+    "three-mesh-bvh": "0.6.0",
+    "three-stdlib": "^2.29.1"
   },
   "peerDependencies": {
     "three": "0.152.2"
